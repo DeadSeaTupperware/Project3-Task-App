@@ -6,10 +6,12 @@ const { typeDefs, resolvers } = require("./schemas");
 const { authMiddleware } = require("./utils/auth");
 
 const PORT = process.env.PORT || 3001;
+const app = express(); // Initialize the app before using it
+
+// Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
