@@ -8,6 +8,7 @@ import { setContext } from "@apollo/client/link/context";
 
 import { Outlet } from "react-router-dom";
 import "./App.css";
+import 'semantic-ui-css/semantic.min.css'
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
