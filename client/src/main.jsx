@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom/dist";
 import "./index.css";
 
 import App from "./App.jsx";
-import Error from "./pages/Error";
+// import Error from "./pages/Error";
 import Login from "./pages/Login";
 import Landing from "./pages/Landing";
 
@@ -11,7 +11,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    error: <Error />,
+    // error: <Error />,
     children: [
       {
         index: true,
