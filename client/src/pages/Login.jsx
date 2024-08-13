@@ -59,7 +59,7 @@ const Login = () => {
             <Button
               fluid
               size="large"
-              style={{ backgroundColor: "#d41050", color: "#fff" }}
+              style={{ backgroundColor: "#08013a", color: "#fff" }}
               type="submit"
               loading={loading}
               disabled={loading}
@@ -71,13 +71,13 @@ const Login = () => {
         {error && (
           <Message
             negative
-            style={{ backgroundColor: "#008599", color: "#fff", borderColor: "#d41050" }}
+            style={{ backgroundColor: "#08013a", color: "#fff", borderColor: "#d41050" }}
           >
             <Message.Header style={{ color: "#fff" }}>Login failed</Message.Header>
             <p>Please check your credentials and try again.</p>
           </Message>
         )}
-        <Message style={{ backgroundColor: "#d41050", color: "#fff" }}>
+        <Message style={{ backgroundColor: "#08013a", color: "#fff" }}>
           New to us?{" "}
           <Link to="/Landing" style={{ color: "white" }}>
             Sign Up

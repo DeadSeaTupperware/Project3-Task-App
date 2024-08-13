@@ -19,6 +19,9 @@ body {
 
 }
 
+.custom-navbar {
+  background-color: #08013a !important;
+
 .about-us p {
   font-size: 1.2em; 
 }
@@ -29,12 +32,18 @@ body {
   border-radius: 16px;
   padding: 0.5rem;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(0, 0, 0, 0.1);
+
 }
 
-.nav-item {
-  align-content: space-evenly;
-  justify-content: center;
+.custom-navbar .item,
+.custom-navbar .item:hover {
+  color: white !important;
 }
+
+
+.custom-navbar .item.header {
+  font-weight: bold;
+  font-size: 1.2em;
 
 .nav {
   display: flex;
@@ -43,46 +52,18 @@ body {
 
 .navbar-brand {
   align-items: center;
+
 }
 
-.navbar-brand img {
-  height: 40px; 
-  margin-right: 1rem; 
+.custom-navbar .item:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
-.nav-link {
-  color: gray;
-  font-weight: 500;
-  position: relative;
-  }
-  
-  .nav-link:hover, .nav-link.active {
-  color: black;
-  }
-  @media (min-width: 991px) {
-  .nav-link::before {
-      content: "";
-      position: absolute;
-      bottom: 0; 
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 2px;
-      background-color: #d41050;
-      visibility: hidden;
-      transition: 0.3s ease-in-out;
-  }
-  
-  .nav-link:hover::before, .nav-link:active::before {
-      width: 100%;
-      visibility: visible;
-  }
-  
-  }
-
-.navbar-toggle {
-  display: none; 
+.custom-navbar .item.active {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  font-weight: bold;
 }
+
 
 .signup-container {
   display: flex;
