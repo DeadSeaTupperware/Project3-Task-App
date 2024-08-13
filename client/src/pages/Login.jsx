@@ -67,10 +67,10 @@ const Login = () => {
 <Button fluid size="large" style={{ backgroundColor: '#008599', color: '#fff' }} type="submit" loading={loading} disabled={loading}>
               {loading ? "Loading..." : "Login"}
             </Button>
-          </Segment>
+            </Segment>
         </Form>
         {error && (
-          <Message negative>
+          <Message negative style={{ backgroundColor: '#d41050', color: '#fff' }}>
             <Message.Header>Login failed</Message.Header>
             <p>Please check your credentials and try again.</p>
           </Message>
