@@ -6,8 +6,6 @@ import {
   ModalDescription,
   ModalContent,
   ModalActions,
-  Header,
-  Image,
   Modal,
 } from "semantic-ui-react";
 
@@ -24,19 +22,10 @@ export default function TaskBoard() {
           trigger={<Button>Add Task</Button>}
         >
           <ModalHeader>Add Task</ModalHeader>
-          <ModalContent image>
-            <Image
-              size="medium"
-              src="/images/avatar/large/rachel.png"
-              wrapped
-            />
+          <ModalContent>
             <ModalDescription>
-              <Header>Default Profile Image</Header>
-              <p>
-                Found the following gravatar image associated with your e-mail
-                address.
-              </p>
-              <p>Is it okay to use this photo?</p>
+              <p></p>
+              <p></p>
             </ModalDescription>
           </ModalContent>
           <ModalActions>
