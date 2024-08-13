@@ -61,18 +61,6 @@ const Login = () => {
               onChange={handleChange}
               style={{ borderColor: "#008599" }}
             />
-            <Form.Input
-              fluid
-              icon="lock"
-              iconPosition="left"
-              placeholder="Password"
-              name="password"
-              type="password"
-              value={formState.password}
-              onChange={handleChange}
-              style={{ borderColor: "#008599" }}
-            />
-
             <Button
               fluid
               size="large"
