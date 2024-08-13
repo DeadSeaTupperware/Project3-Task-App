@@ -15,16 +15,20 @@ body {
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between; 
-  align-items: center; 
-  padding: 1rem 2rem;
-  background-color: #1a1a1a;
-  color: white;
+  background-color: #fff;
+  height: 80px;
+  margin: 20px;
+  border-radius: 16px;
+  padding: 0.5rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item {
+  align-content: space-evenly;
+  justify-content: center;
 }
 
 .navbar-brand {
-  display: flex;
   align-items: center;
 }
 
@@ -33,41 +37,40 @@ body {
   margin-right: 1rem; 
 }
 
-.nav-links {
-  display: flex;
-  gap: 1rem; 
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
+.nav-link {
+  color: gray;
   font-weight: 500;
-}
-
-.nav-links a:hover {
-  color: #646cff; 
-}
+  position: relative;
+  }
+  
+  .nav-link:hover, .nav-link.active {
+  color: black;
+  }
+  @media (min-width: 991px) {
+  .nav-link::before {
+      content: "";
+      position: absolute;
+      bottom: 0; 
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background-color: #d41050;
+      visibility: hidden;
+      transition: 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover::before, .nav-link:active::before {
+      width: 100%;
+      visibility: visible;
+  }
+  
+  }
 
 .navbar-toggle {
   display: none; 
 }
 
-/* Responsive styling for mobile view */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 1rem;
-  }
-
-  .navbar-toggle {
-    display: block; /* Show toggle button for small screens */
-  }
-}
 .signup-container {
   display: flex;
   flex-direction: column;
