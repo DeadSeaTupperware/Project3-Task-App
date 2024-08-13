@@ -8,6 +8,7 @@ import App from "./App";
 import Login from "./pages/Login";
 import Landing from "./pages/Landing";
 import TaskBoard from "./pages/TaskBoard";
+import Homepage from "./pages/Homepage";
 
 const router = createBrowserRouter([
   {
@@ -15,9 +16,14 @@ const router = createBrowserRouter([
     element: <App />,
     // error: <Error />,
     children: [
+      
       {
         index: true,
-        element: <Landing />,
+        element: <Homepage />,
+      },
+      {
+        path: "Landing",
+        element: <Landing />
       },
       {
         path: "login",
