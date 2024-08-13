@@ -64,7 +64,7 @@ const TaskBoard = () => {
         onChange={handleDateChange}
         value={selectedDate}
         className="task-calendar"
-        tileClassName={({ date, view }) => {
+        tileClassName={({ date }) => {
           // Highlight tiles that match task dates
           return tasks.some(task => task.date.toDateString() === date.toDateString())
             ? 'highlight'
