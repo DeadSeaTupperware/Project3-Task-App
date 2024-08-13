@@ -7,7 +7,7 @@ import Auth from "../utils/auth";
 import {
   Button,
   Form,
-  Grid,
+  Container,
   Header,
   Message,
   Segment,
@@ -39,13 +39,8 @@ const Login = () => {
   };
 
   return (
-    <Grid
-      textAlign="center"
-      style={{ height: "100vh", backgroundColor: "#008599" }}
-      verticalAlign="middle"
-    >
-      <Grid.Column style={{ maxWidth: 450 }}>
-        <Header as="h2" style={{ color: "white" }} textAlign="center">
+    <Container>
+         <Header as="h2" style={{ color: "white" }} textAlign="center">
           Log-in to your account
         </Header>
         <Form size="large" onSubmit={handleFormSubmit}>
@@ -100,8 +95,9 @@ const Login = () => {
             Sign Up
           </Link>
         </Message>
-      </Grid.Column>
-    </Grid>
+
+    </Container>
+     
   );
 };
 
