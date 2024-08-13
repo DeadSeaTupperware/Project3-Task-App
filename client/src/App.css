@@ -1,4 +1,5 @@
 
+
 body {
   margin: 0;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -7,15 +8,32 @@ body {
   color: rgba(255, 255, 255, 0.87);
   background-color: #008599;
 }
+.logo {
+  align-items: center;
+}
 
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0; 
+
 }
 
 .custom-navbar {
   background-color: #08013a !important;
+}
+
+.about-us p {
+  font-size: 1.2em; 
+}
+.navbar {
+  background-color: #fff;
+  height: 80px;
+  margin: 20px;
+  border-radius: 16px;
+  padding: 0.5rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(0, 0, 0, 0.1);
+
 }
 
 .custom-navbar .item,
@@ -23,9 +41,20 @@ body {
   color: white !important;
 }
 
+
 .custom-navbar .item.header {
   font-weight: bold;
   font-size: 1.2em;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+}
+
+.navbar-brand {
+  align-items: center;
+
 }
 
 .custom-navbar .item:hover {
@@ -208,17 +237,15 @@ h2 {
   font-size: 1.5rem;
 }
 
-/* Highlighting tasks on the calendar */
 .highlight {
   background-color: #ffeb3b !important;
   border-radius: 50%;
-  color: black !important; /* Black text on highlighted tasks */
+  color: black !important; 
   font-weight: bold;
 }
 
-/* Calendar month navigation buttons */
 .task-calendar .react-calendar__navigation button {
-  background-color: #08013a; /* Blue background for navigation buttons */
+  background-color: #007bff; /* Blue background for navigation buttons */
   color: #fff; /* White text on navigation buttons */
   border: none;
   border-radius: 4px;
@@ -229,5 +256,5 @@ h2 {
 }
 
 .task-calendar .react-calendar__navigation button:hover {
-  background-color: #261b79;
+  background-color: #0056b3;
 }
