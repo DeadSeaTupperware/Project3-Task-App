@@ -63,14 +63,8 @@ const Login = () => {
             />
 
 
-            <Button
-              color="teal"
-              fluid
-              size="large"
-              type="submit"
-              loading={loading}
-              disabled={loading}
-            >
+           
+<Button fluid size="large" style={{ backgroundColor: '#008599', color: '#fff' }} type="submit" loading={loading} disabled={loading}>
               {loading ? "Loading..." : "Login"}
             </Button>
           </Segment>
