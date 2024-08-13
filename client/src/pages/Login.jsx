@@ -4,7 +4,14 @@ import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 
 import Auth from "../utils/auth";
-import { Button, Form, Grid, Header, Message, Segment } from "semantic-ui-react";
+import {
+  Button,
+  Form,
+  Grid,
+  Header,
+  Message,
+  Segment,
+} from "semantic-ui-react";
 
 const Login = () => {
   const [formState, setFormState] = useState({ email: "", password: "" });
@@ -32,13 +39,17 @@ const Login = () => {
   };
 
   return (
-    <Grid textAlign="center" style={{ height: '100vh', backgroundColor: '#08013a' }} verticalAlign="middle">
+    <Grid
+      textAlign="center"
+      style={{ height: "100vh", backgroundColor: "#08013a" }}
+      verticalAlign="middle"
+    >
       <Grid.Column style={{ maxWidth: 450 }}>
-        <Header as="h2" style={{ color: '#d41050' }} textAlign="center">
+        <Header as="h2" style={{ color: "#d41050" }} textAlign="center">
           Log-in to your account
         </Header>
         <Form size="large" onSubmit={handleFormSubmit}>
-          <Segment stacked style={{ borderColor: '#d41050' }}>
+          <Segment stacked style={{ borderColor: "#d41050" }}>
             <Form.Input
               fluid
               icon="user"
@@ -48,7 +59,7 @@ const Login = () => {
               type="email"
               value={formState.email}
               onChange={handleChange}
-              style={{ borderColor: '#008599' }}
+              style={{ borderColor: "#008599" }}
             />
             <Form.Input
               fluid
@@ -59,24 +70,35 @@ const Login = () => {
               type="password"
               value={formState.password}
               onChange={handleChange}
-              style={{ borderColor: '#008599' }}
+              style={{ borderColor: "#008599" }}
             />
 
-
-           
-<Button fluid size="large" style={{ backgroundColor: '#008599', color: '#fff' }} type="submit" loading={loading} disabled={loading}>
+            <Button
+              fluid
+              size="large"
+              style={{ backgroundColor: "#008599", color: "#fff" }}
+              type="submit"
+              loading={loading}
+              disabled={loading}
+            >
               {loading ? "Loading..." : "Login"}
             </Button>
-            </Segment>
+          </Segment>
         </Form>
         {error && (
-          <Message negative style={{ backgroundColor: '#d41050', color: '#fff' }}>
+          <Message
+            negative
+            style={{ backgroundColor: "#d41050", color: "#fff" }}
+          >
             <Message.Header>Login failed</Message.Header>
             <p>Please check your credentials and try again.</p>
           </Message>
         )}
-     <Message style={{ backgroundColor: '#008599', color: '#fff' }}>
-          New to us? <Link to="/signup" style={{ color: '#d41050' }}>Sign Up</Link>
+        <Message style={{ backgroundColor: "#008599", color: "#fff" }}>
+          New to us?{" "}
+          <Link to="/signup" style={{ color: "#d41050" }}>
+            Sign Up
+          </Link>
         </Message>
       </Grid.Column>
     </Grid>
