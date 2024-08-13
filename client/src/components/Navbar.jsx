@@ -18,13 +18,6 @@ function BasicExample() {
             <Nav.Link as={Link} to="/landing">Signup</Nav.Link>
             <Nav.Link as={Link} to="/taskboard">TaskBoard</Nav.Link>
             <Nav.Link as={Link} to="/login">Login</Nav.Link>
-            <NavDropdown title="More" id="basic-nav-dropdown">
-              <NavDropdown.Item as={Link} to="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="#action/3.2">Another action</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="#action/3.3">Something else here</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item as={Link} to="#action/3.4">Separated link</NavDropdown.Item>
-            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
