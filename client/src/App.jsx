@@ -46,7 +46,7 @@ function App() {
     <ApolloProvider client={client}>
       <div className="">
         <div className="container">
-        <BasicExample /> {/* Add the Navbar here */}
+        <BasicExample />
           <Outlet />
           <Routes>
             <Route path="/Homepage" element={<Homepage />} />
