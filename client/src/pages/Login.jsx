@@ -4,14 +4,7 @@ import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 
 import Auth from "../utils/auth";
-import {
-  Button,
-  Form,
-  Grid,
-  Header,
-  Message,
-  Segment,
-} from "semantic-ui-react";
+import { Button, Form, Grid, Header, Message, Segment } from "semantic-ui-react";
 
 const Login = () => {
   const [formState, setFormState] = useState({ email: "", password: "" });
@@ -39,9 +32,9 @@ const Login = () => {
   };
 
   return (
-    <Grid textAlign="center" style={{ height: "100vh" }} verticalAlign="middle">
+    <Grid textAlign="center" style={{ height: '100vh', backgroundColor: '#08013a' }} verticalAlign="middle">
       <Grid.Column style={{ maxWidth: 450 }}>
-        <Header as="h2" color="teal" textAlign="center">
+        <Header as="h2" style={{ color: '#d41050' }} textAlign="center">
           Log-in to your account
         </Header>
         <Form size="large" onSubmit={handleFormSubmit}>
