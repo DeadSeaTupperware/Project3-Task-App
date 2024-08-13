@@ -14,68 +14,29 @@ body {
   padding: 0; 
 }
 
-.navbar {
-  background-color: #fff;
-  height: 80px;
-  margin: 20px;
-  border-radius: 16px;
-  padding: 0.5rem;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(0, 0, 0, 0.1);
+.custom-navbar {
+  background-color: #08013a !important;
 }
 
-.nav-item {
-  align-content: space-evenly;
-  justify-content: center;
+.custom-navbar .item,
+.custom-navbar .item:hover {
+  color: white !important;
 }
 
-.nav {
-  display: flex;
-  list-style: none;
-  justify-content: center;
+.custom-navbar .item.header {
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
-.navbar-brand {
-  align-items: center;
+.custom-navbar .item:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
-.navbar-brand img {
-  height: 40px; 
-  margin-right: 1rem; 
+.custom-navbar .item.active {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  font-weight: bold;
 }
 
-.nav-link {
-  color: gray;
-  font-weight: 500;
-  position: relative;
-  }
-  
-  .nav-link:hover, .nav-link.active {
-  color: black;
-  }
-  @media (min-width: 991px) {
-  .nav-link::before {
-      content: "";
-      position: absolute;
-      bottom: 0; 
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 2px;
-      background-color: #d41050;
-      visibility: hidden;
-      transition: 0.3s ease-in-out;
-  }
-  
-  .nav-link:hover::before, .nav-link:active::before {
-      width: 100%;
-      visibility: visible;
-  }
-  
-  }
-
-.navbar-toggle {
-  display: none; 
-}
 
 .signup-container {
   display: flex;
