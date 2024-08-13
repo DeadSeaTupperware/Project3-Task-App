@@ -41,11 +41,11 @@ const Login = () => {
   return (
     <Grid
       textAlign="center"
-      style={{ height: "100vh", backgroundColor: "#08013a" }}
+      style={{ height: "100vh", backgroundColor: "#008599" }}
       verticalAlign="middle"
     >
       <Grid.Column style={{ maxWidth: 450 }}>
-        <Header as="h2" style={{ color: "#d41050" }} textAlign="center">
+        <Header as="h2" style={{ color: "white" }} textAlign="center">
           Log-in to your account
         </Header>
         <Form size="large" onSubmit={handleFormSubmit}>
@@ -96,7 +96,7 @@ const Login = () => {
         )}
         <Message style={{ backgroundColor: "#008599", color: "#fff" }}>
           New to us?{" "}
-          <Link to="/signup" style={{ color: "#d41050" }}>
+          <Link to="/Landing" style={{ color: "#d41050" }}>
             Sign Up
           </Link>
         </Message>
