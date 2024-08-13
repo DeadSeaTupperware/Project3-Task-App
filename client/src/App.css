@@ -33,20 +33,36 @@ body {
   margin-right: 1rem; 
 }
 
-.nav-links {
-  display: flex;
-  gap: 1rem; 
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
+.nav-link {
+  color: gray;
   font-weight: 500;
-}
-
-.nav-links a:hover {
-  color: #646cff; 
-}
+  position: relative;
+  align-content: space-evenly;
+  }
+  
+  .nav-link:hover, .nav-link.active {
+  color: black;
+  }
+  @media (min-width: 991px) {
+  .nav-link::before {
+      content: "";
+      position: absolute;
+      bottom: 0; 
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background-color: #d41050;
+      visibility: hidden;
+      transition: 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover::before, .nav-link:active::before {
+      width: 100%;
+      visibility: visible;
+  }
+  
+  }
 
 .navbar-toggle {
   display: none; 

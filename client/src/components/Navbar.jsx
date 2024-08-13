@@ -9,7 +9,7 @@ function BasicExample() {
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
         <Navbar.Brand as={Link} to="/">
-          <img src="/Strive-Logo.jpg" alt="Logo" className="logo" />
+          <img src="/Strive-Logo.png" alt="Logo" className="logo" />
         </Navbar.Brand>
         <Navbar.Toggle className="navbar-toggle" aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
