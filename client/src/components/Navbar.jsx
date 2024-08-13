@@ -15,7 +15,7 @@ function BasicExample() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to="/landing">Landing</Nav.Link>
+            <Nav.Link as={Link} to="/landing">Signup</Nav.Link>
             <Nav.Link as={Link} to="/taskboard">TaskBoard</Nav.Link>
             <Nav.Link as={Link} to="/login">Login</Nav.Link>
             <NavDropdown title="More" id="basic-nav-dropdown">
