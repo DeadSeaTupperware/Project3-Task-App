@@ -1,18 +1,25 @@
 const { Schema, model } = require("mongoose");
 
 const taskSchema = new Schema({
-  key: {
+  name: {
     type: String,
     required: true,
   },
   status: {
     type: String,
     enum: ["habit", "dailyQuest", "todo", "reward"],
+    default: "todo",
     required: true,
   },
-  task: {
+  description: {
     type: String,
-    required: true,
+  },
+  priority: {
+    type: String,
+  },
+  difficulty: {
+    type: String,
+    enum: ["D", "C", "B", "A", "S"],
   },
 });
 
