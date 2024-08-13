@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-
 function BasicExample() {
   return (
     <nav className="navbar">
@@ -24,11 +23,11 @@ function BasicExample() {
             <li className="nav-item">
               <Link to="/login" className="nav-link">Login</Link>
             </li>
+
           </ul>
         </div>
       </div>
     </nav>
   );
 }
-
 export default BasicExample;
