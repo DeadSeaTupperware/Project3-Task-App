@@ -1,6 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+const UpcomingEvents = () => {
+    const [events, setEvents] = useState([]);
+  
+    useEffect(() => {
+      // Fetch upcoming events from the API
+      fetch('/api/events/upcoming')
+        .then(response => response.json())
+        .then(data => setEvents(data))
+        .catch(error => console.error('Error fetching events:', error));
+    }, []);
+  
+
 return (
     <div className="upcoming-events">
       <h2>Upcoming Events</h2>
@@ -16,5 +28,6 @@ return (
       </ul>
     </div>
   );
+};
 
 export default UpcomingEvents;
