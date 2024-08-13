@@ -7,7 +7,7 @@ import Auth from "../utils/auth";
 import {
   Button,
   Form,
-  Grid,
+  Container,
   Header,
   Message,
   Segment,
@@ -39,13 +39,8 @@ const Login = () => {
   };
 
   return (
-    <Grid
-      textAlign="center"
-      style={{ height: "100vh", backgroundColor: "#08013a" }}
-      verticalAlign="middle"
-    >
-      <Grid.Column style={{ maxWidth: 450 }}>
-        <Header as="h2" style={{ color: "#d41050" }} textAlign="center">
+    <Container>
+         <Header as="h2" style={{ color: "white" }} textAlign="center">
           Log-in to your account
         </Header>
         <Form size="large" onSubmit={handleFormSubmit}>
@@ -76,7 +71,7 @@ const Login = () => {
             <Button
               fluid
               size="large"
-              style={{ backgroundColor: "#008599", color: "#fff" }}
+              style={{ backgroundColor: "#d41050", color: "#fff" }}
               type="submit"
               loading={loading}
               disabled={loading}
@@ -88,20 +83,21 @@ const Login = () => {
         {error && (
           <Message
             negative
-            style={{ backgroundColor: "#d41050", color: "#fff" }}
+            style={{ backgroundColor: "#008599", color: "#fff", borderColor: "#d41050" }}
           >
-            <Message.Header>Login failed</Message.Header>
+            <Message.Header style={{ color: "#fff" }}>Login failed</Message.Header>
             <p>Please check your credentials and try again.</p>
           </Message>
         )}
-        <Message style={{ backgroundColor: "#008599", color: "#fff" }}>
+        <Message style={{ backgroundColor: "#d41050", color: "#fff" }}>
           New to us?{" "}
-          <Link to="/signup" style={{ color: "#d41050" }}>
+          <Link to="/Landing" style={{ color: "white" }}>
             Sign Up
           </Link>
         </Message>
-      </Grid.Column>
-    </Grid>
+
+    </Container>
+     
   );
 };
 
