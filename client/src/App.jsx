@@ -15,6 +15,7 @@ import Login from "./pages/Login";
 import Landing from './pages/Landing';  
 import Dashboard from './pages/TaskBoard'
 import BasicExample from './components/Navbar';
+import Homepage from './pages/Homepage';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -48,6 +49,7 @@ function App() {
         <BasicExample /> {/* Add the Navbar here */}
           <Outlet />
           <Routes>
+            <Route path="/Homepage" element={<Homepage />} />
             <Route path="/Landing" element={<Landing />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/TaskBoard" element={<Dashboard />} />
