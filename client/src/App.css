@@ -257,7 +257,7 @@ h2 {
 }
 
 .task-calendar .react-calendar__navigation button:hover {
-  background-color: #0056b3;
+  background-color: #ffffff;
 }
 
 .react-calendar {
@@ -293,13 +293,22 @@ h2 {
 
 
 .react-calendar__year-view {
-  background-color: #007bff; 
-  color: white; 
+  background-color: #ffffff; 
+  color:  #007bff; 
 }
 
 
 .react-calendar__year-view .react-calendar__tile {
-  background-color: #007bff; 
-  color: white; 
+  background-color: #ffffff; 
+  color: #232c36; 
   border: none; 
+}
+
+.task-item {
+  color: #333;
+  margin-bottom: 0.5rem; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
 }
