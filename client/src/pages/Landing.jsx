@@ -64,14 +64,6 @@ const Landing = () => {
               value={formState.email}
               onChange={handleChange}
             />
-            <input
-              className="form-input"
-              placeholder="******"
-              name="password"
-              type="password"
-              value={formState.password}
-              onChange={handleChange}
-            />
             <button
               className="btn-submit"
               type="submit"
