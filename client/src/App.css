@@ -226,3 +226,7 @@ h1 {
 h2 {
   font-size: 1.5rem;
 }
+
+.task-calendar .react-calendar__tile {
+  color: black;
+}
