@@ -38,7 +38,7 @@ const Login = () => {
           Log-in to your account
         </Header>
         <Form size="large" onSubmit={handleFormSubmit}>
-          <Segment stacked>
+          <Segment stacked style={{ borderColor: '#d41050' }}>
             <Form.Input
               fluid
               icon="user"
@@ -48,6 +48,7 @@ const Login = () => {
               type="email"
               value={formState.email}
               onChange={handleChange}
+              style={{ borderColor: '#008599' }}
             />
             <Form.Input
               fluid
@@ -58,7 +59,9 @@ const Login = () => {
               type="password"
               value={formState.password}
               onChange={handleChange}
+              style={{ borderColor: '#008599' }}
             />
+
 
             <Button
               color="teal"
