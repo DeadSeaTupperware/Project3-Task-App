@@ -8,7 +8,7 @@ function BasicExample() {
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
         <Navbar.Brand href="#home"><img
-        src = ".public/images/Strive-Logo.jpg"
+        src = "./public/Strive-Logo.jpg"
         />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
