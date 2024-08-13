@@ -1,9 +1,6 @@
-import NavBar from '../components/Navbar'; 
-
 const Homepage = () => {
   return (
     <div className="homepage">
-      <NavBar />
       <header className="header">
         <img src={"/Strive-Logo.jpg"} alt="Logo" className="logo" />
         <h1>Welcome to Our Homepage</h1>
