@@ -88,15 +88,15 @@ const Login = () => {
         {error && (
           <Message
             negative
-            style={{ backgroundColor: "#d41050", color: "#fff" }}
+            style={{ backgroundColor: "#008599", color: "#fff", borderColor: "#d41050" }}
           >
-            <Message.Header>Login failed</Message.Header>
+            <Message.Header style={{ color: "#fff" }}>Login failed</Message.Header>
             <p>Please check your credentials and try again.</p>
           </Message>
         )}
-        <Message style={{ backgroundColor: "#008599", color: "#fff" }}>
+        <Message style={{ backgroundColor: "#d41050", color: "#fff" }}>
           New to us?{" "}
-          <Link to="/Landing" style={{ color: "#d41050" }}>
+          <Link to="/Landing" style={{ color: "white" }}>
             Sign Up
           </Link>
         </Message>
