@@ -12,7 +12,7 @@ import "./App.css";
 import 'semantic-ui-css/semantic.min.css'
 import Login from "./pages/Login";
 import Landing from './pages/Landing';  
-import Dashboard from './pages/Dashboard'
+import Dashboard from './pages/TaskBoard'
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -45,9 +45,9 @@ function App() {
         <div className="container">
           <Outlet />
           <Routes>
-            <Route path="/" element={<Landing />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/Landing" element={<Landing />} />
+            <Route path="/Login" element={<Login />} />
+            <Route path="/TaskBoard" element={<Dashboard />} />
           </Routes>
         </div>
       </div>
