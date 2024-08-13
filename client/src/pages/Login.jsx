@@ -76,7 +76,7 @@ const Login = () => {
             <Button
               fluid
               size="large"
-              style={{ backgroundColor: "#008599", color: "#fff" }}
+              style={{ backgroundColor: "#d41050", color: "#fff" }}
               type="submit"
               loading={loading}
               disabled={loading}
