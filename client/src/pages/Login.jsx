@@ -75,8 +75,8 @@ const Login = () => {
             <p>Please check your credentials and try again.</p>
           </Message>
         )}
-        <Message>
-          New to us? <Link to="/signup">Sign Up</Link>
+     <Message style={{ backgroundColor: '#008599', color: '#fff' }}>
+          New to us? <Link to="/signup" style={{ color: '#d41050' }}>Sign Up</Link>
         </Message>
       </Grid.Column>
     </Grid>
