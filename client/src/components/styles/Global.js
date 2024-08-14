@@ -8,7 +8,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     background: ${({ theme }) => theme.colors.body};
     color: hsl(192, 100%, 9%);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.15em;
     margin: 0;
     padding:0;
@@ -19,6 +19,11 @@ const GlobalStyles = createGlobalStyle`
   }
   img {
     max-width: 100%;
+  }
+  button {
+  border: none;
+  text-align: center;
+  text-decoration: none;
   }
 `;
 
