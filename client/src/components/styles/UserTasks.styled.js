@@ -58,7 +58,7 @@ export const TasksColumn = styled.div`
 `;
 
 export const ColumnTitle = styled.h2`
-  color: #34313a;
+  color: #08013a;
   font-size: 20px;
   font-family: "Roboto Condensed", sans-serif;
   font-weight: bold;
@@ -70,7 +70,7 @@ export const TasksFilterContainer = styled.div`
 `;
 
 export const TasksFilter = styled.span`
-  color: #686274;
+  color: #08013a;
   font-size: 12px;
   padding: 8px 8px 6px;
   font-weight: bold;
