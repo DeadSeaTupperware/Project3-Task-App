@@ -6,10 +6,10 @@ import {
   ItemPrice,
 } from "./styles/Reward.styled";
 
-export default function Reward() {
+export default function Reward({ emoji }) {
   return (
     <StyledReward>
-      <ItemImage></ItemImage>
+      <ItemImage>{emoji}</ItemImage>
       <ItemPriceContainer>
         <ItemPriceLogo src="./images/gold.svg"></ItemPriceLogo>
         <ItemPrice>25</ItemPrice>
