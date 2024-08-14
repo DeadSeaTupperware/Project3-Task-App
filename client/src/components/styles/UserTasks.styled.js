@@ -17,7 +17,6 @@ export const InputContainer = styled.div`
 export const SearchBar = styled.input`
   background: #ffffff;
   padding: 4px 16px 4px 12px;
-  border-radius: 3px;
   border: solid;
   border-width: 1px;
   border-color: lightgrey;
@@ -101,7 +100,6 @@ export const QuickAdd = styled.textarea`
 
 export const Control = styled.div`
   border-radius: ${(props) => (props.left ? "5px 0 0 5px" : "0 5px 5px 0")};
-  padding: 15px 6px 30px 6px;
   background: ${(props) => {
     switch (props.$type) {
       case "habit":
@@ -114,17 +112,20 @@ export const Control = styled.div`
         return "#EDECEE";
     }
   }};
-  box-shadow: 0 1px 4px rgb(0 0 0 / 0.35);
+
+  padding: 15px 6px 30px 6px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.35);
 `;
 
 export const ControlButton = styled.button`
-  background: #1a181d40;
+  border-radius: ${(props) => (props.habit ? "50%" : "3px")};
+  background: ${(props) => (props.habit ? "#1A181D40" : "#FFFFFF80")};
   cursor: pointer;
-  border-radius: ${(props) => (props.habit ? `50%` : "3px")};
   width: 28px;
   height: 28px;
 `;
 
+// Habits
 export const Habit = styled.div`
   display: flex;
   margin: 0 0 3px 0;
@@ -164,6 +165,7 @@ export const HabitStreak = styled.span`
   padding: 0 5px;
 `;
 
+// Dailies
 export const Daily = styled(Habit)``;
 
 export const DailyLogo = styled(HabitLogo)``;
@@ -176,10 +178,56 @@ export const DailyStreakContainer = styled(HabitStreakContainer)``;
 
 export const DailyStreak = styled(HabitStreak)``;
 
+// To Do's
 export const ToDo = styled(Habit)``;
-
-export const ToDoLogo = styled(HabitLogo)``;
 
 export const ToDoInfo = styled(HabitInfo)``;
 
 export const ToDoName = styled(HabitName)``;
+
+// Rewards
+export const Item = styled.div`
+  width: 94px;
+  height: 120px;
+  border-radius: 4px 4px 0 0;
+  margin: 10px 0 0 0;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const ItemsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+`;
+
+export const ItemPriceContainer = styled.div`
+  width: 94px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffbe5d33;
+  margin: 0 1px;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.35);
+`;
+
+export const ItemPrice = styled.span`
+  font-size: 12px;
+  color: #794b00;
+  font-weight: bold;
+`;
+
+export const ItemPriceLogo = styled(TagsLogo)`
+  margin: 0 5px 0 0;
+`;
+
+export const ItemImage = styled.div`
+  width: 68px;
+  height: 68px;
+  background: #dddddd;
+  margin: 12px 0;
+`;

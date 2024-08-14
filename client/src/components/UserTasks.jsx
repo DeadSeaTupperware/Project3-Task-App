@@ -1,12 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Flex } from "./styles/Flex.styled";
 import {
-  InputContainer,
   ColumnTitle,
-  SearchBar,
-  StyledUserTasks,
+  InputContainer,
   ControlButton,
   QuickAdd,
+  SearchBar,
+  StyledUserTasks,
   TagsDropdown,
   TagsLogo,
   TagsSpan,
@@ -32,6 +32,12 @@ import {
   ToDo,
   ToDoInfo,
   ToDoName,
+  Item,
+  ItemImage,
+  ItemPriceContainer,
+  ItemPriceLogo,
+  ItemPrice,
+  ItemsContainer,
 } from "./styles/UserTasks.styled";
 
 export default function UserTasks() {
@@ -83,8 +89,8 @@ export default function UserTasks() {
               </Habit>
             </TasksList>
           </TasksColumn>
+          {/* Dailies */}
           <TasksColumn>
-            {/* Dailies */}
             <Flex>
               <ColumnTitle>Dailies</ColumnTitle>
               <TasksFilterContainer>
@@ -135,10 +141,38 @@ export default function UserTasks() {
           <TasksColumn>
             <Flex>
               <ColumnTitle>Rewards</ColumnTitle>
-              <TasksFilter>All</TasksFilter>
-              <TasksFilter>Custom</TasksFilter>
-              <TasksFilter>Wishlist</TasksFilter>
+              <TasksFilterContainer>
+                <TasksFilter>All</TasksFilter>
+                <TasksFilter>Custom</TasksFilter>
+                <TasksFilter>Wishlist</TasksFilter>
+              </TasksFilterContainer>
             </Flex>
+            <TasksList>
+              <QuickAdd placeholder="Add a Reward"></QuickAdd>
+              <ItemsContainer>
+                <Item>
+                  <ItemImage></ItemImage>
+                  <ItemPriceContainer>
+                    <ItemPriceLogo src="./images/gold.svg"></ItemPriceLogo>
+                    <ItemPrice>25</ItemPrice>
+                  </ItemPriceContainer>
+                </Item>
+                <Item>
+                  <ItemImage></ItemImage>
+                  <ItemPriceContainer>
+                    <ItemPriceLogo src="./images/gold.svg"></ItemPriceLogo>
+                    <ItemPrice>25</ItemPrice>
+                  </ItemPriceContainer>
+                </Item>
+                <Item>
+                  <ItemImage></ItemImage>
+                  <ItemPriceContainer>
+                    <ItemPriceLogo src="./images/gold.svg"></ItemPriceLogo>
+                    <ItemPrice>25</ItemPrice>
+                  </ItemPriceContainer>
+                </Item>
+              </ItemsContainer>
+            </TasksList>
           </TasksColumn>
         </Flex>
       </TasksContainer>
