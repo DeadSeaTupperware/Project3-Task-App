@@ -10,7 +10,7 @@ body {
 
 .logo {
   position: absolute;
-  top: 20%;
+  top: 33%;
   left: 50%;
   transform: translate(-50%, -50%);
   animation: float 3s ease-in-out infinite;
@@ -164,6 +164,14 @@ html {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  max-height: 100vh; /* Ensure the container takes up full viewport height */
 }
 
 .signup-form label {
@@ -367,4 +375,8 @@ h2 {
   padding: 1rem; /* Added padding to space the calendar */
   max-width: 100%; /* Ensures the calendar fits within its parent */
   box-sizing: border-box; /* Ensures padding and border are included in total width */
+}
+
+.about-us {
+  margin-top: 600px;
 }
