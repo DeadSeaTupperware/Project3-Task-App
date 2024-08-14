@@ -29,6 +29,9 @@ import {
   DailyStreakContainer,
   DailyLogo,
   DailyStreak,
+  ToDo,
+  ToDoInfo,
+  ToDoName,
 } from "./styles/UserTasks.styled";
 
 export default function UserTasks() {
@@ -59,7 +62,7 @@ export default function UserTasks() {
             <TasksList>
               <QuickAdd placeholder="Add a Habit"></QuickAdd>
               <Habit>
-                <Control habit left>
+                <Control $type="habit" left>
                   <ControlButton habit>
                     <HabitLogo src="./images/plus-sign.svg"></HabitLogo>
                   </ControlButton>
@@ -72,7 +75,7 @@ export default function UserTasks() {
                     <HabitLogo src="./images/habit-tags.svg"></HabitLogo>
                   </HabitStreakContainer>
                 </HabitInfo>
-                <Control habit left>
+                <Control $type="habit">
                   <ControlButton habit>
                     <HabitLogo src="./images/minus-sign.svg"></HabitLogo>
                   </ControlButton>
@@ -93,7 +96,7 @@ export default function UserTasks() {
             <TasksList>
               <QuickAdd placeholder="Add a Daily"></QuickAdd>
               <Daily>
-                <Control left>
+                <Control $type="daily" left>
                   <ControlButton></ControlButton>
                 </Control>
                 <DailyInfo>
@@ -110,10 +113,23 @@ export default function UserTasks() {
           <TasksColumn>
             <Flex>
               <ColumnTitle>To Do's</ColumnTitle>
-              <TasksFilter>Active</TasksFilter>
-              <TasksFilter>Scheduled</TasksFilter>
-              <TasksFilter>Complete</TasksFilter>
+              <TasksFilterContainer>
+                <TasksFilter>Active</TasksFilter>
+                <TasksFilter>Scheduled</TasksFilter>
+                <TasksFilter>Complete</TasksFilter>
+              </TasksFilterContainer>
             </Flex>
+            <TasksList>
+              <QuickAdd placeholder="Add a To Do"></QuickAdd>
+              <ToDo>
+                <Control $type="todo" left>
+                  <ControlButton></ControlButton>
+                </Control>
+                <ToDoInfo>
+                  <ToDoName>Send Package</ToDoName>
+                </ToDoInfo>
+              </ToDo>
+            </TasksList>
           </TasksColumn>
           {/* Rewards */}
           <TasksColumn>
