@@ -25,37 +25,41 @@ import Reward from "./Reward";
 
 export default function UserTasks() {
   // State
-  const [inputText, setInputText] = useState("");
+
+  // To do's
+  const [todoText, setTodoText] = useState("");
   const [todos, setTodos] = useState([]);
-  const [status, setStatus] = useState("active");
+  const [todoStatus, setTodoStatus] = useState("active");
   const [filteredTodos, setFilteredTodos] = useState([]);
 
   // useEffect
   useEffect(() => {
     filterHandler();
     // eslint-disable-next-line
-  }, [todos, status]);
+  }, [todos, todoStatus]);
 
   // Function
-  const inputTextHandler = (e) => {
-    setInputText(e.target.value);
+
+  // To do's
+  const todoTextHandler = (e) => {
+    setTodoText(e.target.value);
   };
 
   const submitTodoHandler = (e) => {
     e.preventDefault();
     setTodos([
       ...todos,
-      { text: inputText, completed: false, id: Math.random() * 1000 },
+      { text: todoText, completed: false, id: Math.random() * 1000 },
     ]);
-    setInputText("");
+    setTodoText("");
   };
 
-  const statusHandler = (e) => {
-    setStatus(e);
+  const todoStatusHandler = (e) => {
+    setTodoStatus(e);
   };
 
   const filterHandler = () => {
-    switch (status) {
+    switch (todoStatus) {
       case "complete":
         setFilteredTodos(todos.filter((todo) => todo.completed === true));
         break;
@@ -117,13 +121,13 @@ export default function UserTasks() {
             <Flex>
               <ColumnTitle>To Do's</ColumnTitle>
               <TasksFilterContainer>
-                <TasksFilter onClick={(e) => statusHandler("active")}>
+                <TasksFilter onClick={(e) => todoStatusHandler("active")}>
                   Active
                 </TasksFilter>
-                <TasksFilter onClick={(e) => statusHandler("all")}>
+                <TasksFilter onClick={(e) => todoStatusHandler("all")}>
                   All
                 </TasksFilter>
-                <TasksFilter onClick={(e) => statusHandler("complete")}>
+                <TasksFilter onClick={(e) => todoStatusHandler("complete")}>
                   Complete
                 </TasksFilter>
               </TasksFilterContainer>
@@ -131,8 +135,8 @@ export default function UserTasks() {
             <TasksList>
               <form onSubmit={submitTodoHandler}>
                 <QuickAdd
-                  value={inputText}
-                  onChange={inputTextHandler}
+                  value={todoText}
+                  onChange={todoTextHandler}
                   type={"text"}
                   placeholder="Add a To Do"
                 ></QuickAdd>
