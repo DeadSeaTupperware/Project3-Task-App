@@ -3,7 +3,12 @@ import { StyledHabit, HabitInfo, HabitName } from "./Habit.styled";
 
 export const StyledToDo = styled(StyledHabit)``;
 
-export const ToDoInfo = styled(HabitInfo)``;
+export const ToDoInfo = styled(HabitInfo)`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+`;
 
 export const ToDoName = styled(HabitName)``;
 
@@ -20,4 +25,14 @@ export const ControlButton = styled.button`
   cursor: pointer;
   width: 28px;
   height: 28px;
+`;
+
+export const DropdownImage = styled.img`
+  width: 4px;
+  height: 16px;
+`;
+
+export const DropdownButton = styled.button`
+  background: #ffffff;
+  padding: 0 8px;
 `;
