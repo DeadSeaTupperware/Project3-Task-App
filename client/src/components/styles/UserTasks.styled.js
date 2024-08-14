@@ -76,6 +76,13 @@ export const TasksFilter = styled.span`
   font-weight: bold;
   display: flex;
   justify-content: flex-end;
+  cursor: pointer;
+  border-bottom: none;
+
+  &:hover {
+    color: #4f2a93;
+    border-bottom: 2px solid #4f2a93;
+  }
 `;
 
 export const TasksList = styled.div`
@@ -100,4 +107,10 @@ export const ItemsContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+`;
+
+export const NoTaskText = styled.p`
+  display: flex;
+  justify-content: center;
+  color: #a5a1ac;
 `;

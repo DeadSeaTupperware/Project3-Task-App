@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import { useState, useEffect } from "react";
 import { Flex } from "./styles/Flex.styled";
 import {
@@ -17,6 +16,7 @@ import {
   TasksNavigation,
   TasksFilterContainer,
   ItemsContainer,
+  NoTaskText,
 } from "./styles/UserTasks.styled";
 import Daily from "./Daily";
 import Habit from "./Habit";
@@ -30,11 +30,13 @@ export default function UserTasks() {
   const [status, setStatus] = useState("active");
   const [filteredTodos, setFilteredTodos] = useState([]);
 
+  // useEffect
   useEffect(() => {
     filterHandler();
     // eslint-disable-next-line
   }, [todos, status]);
 
+  // Function
   const inputTextHandler = (e) => {
     setInputText(e.target.value);
   };
@@ -135,15 +137,19 @@ export default function UserTasks() {
                   placeholder="Add a To Do"
                 ></QuickAdd>
               </form>
-              {filteredTodos.map((todo) => (
-                <ToDo
-                  todo={todo}
-                  todos={todos}
-                  setTodos={setTodos}
-                  key={todo.id}
-                  text={todo.text}
-                />
-              ))}
+              {filteredTodos.length ? (
+                filteredTodos.map((todo) => (
+                  <ToDo
+                    todo={todo}
+                    todos={todos}
+                    setTodos={setTodos}
+                    key={todo.id}
+                    text={todo.text}
+                  />
+                ))
+              ) : (
+                <NoTaskText>You do not have any To Do's</NoTaskText>
+              )}
             </TasksList>
           </TasksColumn>
           {/* Rewards */}
