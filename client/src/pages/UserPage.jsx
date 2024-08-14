@@ -1,6 +1,4 @@
 import { ThemeProvider } from "styled-components";
-import Header from "../components/Header";
-import AppHeader from "../components/AppHeader";
 import GlobalStyles from "../components/styles/Global";
 import UserTasks from "../components/UserTasks";
 
@@ -19,8 +17,6 @@ function UserPage() {
       <ThemeProvider theme={theme}>
         <>
           <GlobalStyles />
-          <Header />
-          <AppHeader />
           <UserTasks />
         </>
       </ThemeProvider>
