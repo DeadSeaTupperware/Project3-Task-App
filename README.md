@@ -1,7 +1,6 @@
 # Strive
 
-<img src="./client/public/Strive-Logo.png" alt="Strive Logo">
-
+<img src="./Strive-Logo.png" alt="Strive Logo">
 
 ## Overview
 
@@ -36,6 +35,7 @@ Before you begin, ensure you have the following installed:
 - MongoDB (if running locally)
 
 ## Usage
+
 - **Sign Up**: Create an account to start managing your tasks.
 - **Create and Manage Tasks**: Add tasks, set priorities, and deadlines.
 - **Integrate with Calendar**: Sync your tasks with your preferred calendar.
@@ -45,7 +45,6 @@ Before you begin, ensure you have the following installed:
 <img src="./client/public/Screenshot (58).png" alt="homepage">
 <img src="./client/public/Screenshot (59).png" alt="homepage">
 
-
-
 ## License
+
 Strive is licensed under the MIT License
