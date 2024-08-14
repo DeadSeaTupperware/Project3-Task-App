@@ -2,7 +2,7 @@ const Homepage = () => {
   return (
     <div className="homepage">
       <header className="header">
-        <img src={"/Strive-Logo.jpg"} alt="Logo" className="logo" />
+        <img src={"./public/Strive-Logo.png"} alt="Logo" className="logo" />
         <h1>Welcome to Strive</h1>
       </header>
       <main className="main-content">
