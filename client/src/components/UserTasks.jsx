@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Flex } from "./styles/Flex.styled";
 import {
   ColumnTitle,
@@ -24,8 +24,16 @@ import ToDo from "./ToDo";
 import Reward from "./Reward";
 
 export default function UserTasks() {
+  // State
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
+  const [status, setStatus] = useState("active");
+  const [filteredTodos, setFilteredTodos] = useState([]);
+
+  useEffect(() => {
+    filterHandler();
+    // eslint-disable-next-line
+  }, [todos, status]);
 
   const inputTextHandler = (e) => {
     setInputText(e.target.value);
@@ -33,8 +41,29 @@ export default function UserTasks() {
 
   const submitTodoHandler = (e) => {
     e.preventDefault();
-    setTodos([...todos, { text: inputText, id: Math.random() * 1000 }]);
+    setTodos([
+      ...todos,
+      { text: inputText, completed: false, id: Math.random() * 1000 },
+    ]);
     setInputText("");
+  };
+
+  const statusHandler = (e) => {
+    setStatus(e);
+  };
+
+  const filterHandler = () => {
+    switch (status) {
+      case "complete":
+        setFilteredTodos(todos.filter((todo) => todo.completed === true));
+        break;
+      case "active":
+        setFilteredTodos(todos.filter((todo) => todo.completed === false));
+        break;
+      default:
+        setFilteredTodos(todos);
+        break;
+    }
   };
 
   return (
@@ -86,9 +115,15 @@ export default function UserTasks() {
             <Flex>
               <ColumnTitle>To Do's</ColumnTitle>
               <TasksFilterContainer>
-                <TasksFilter>Active</TasksFilter>
-                <TasksFilter>Scheduled</TasksFilter>
-                <TasksFilter>Complete</TasksFilter>
+                <TasksFilter onClick={(e) => statusHandler("active")}>
+                  Active
+                </TasksFilter>
+                <TasksFilter onClick={(e) => statusHandler("all")}>
+                  All
+                </TasksFilter>
+                <TasksFilter onClick={(e) => statusHandler("complete")}>
+                  Complete
+                </TasksFilter>
               </TasksFilterContainer>
             </Flex>
             <TasksList>
@@ -100,7 +135,7 @@ export default function UserTasks() {
                   placeholder="Add a To Do"
                 ></QuickAdd>
               </form>
-              {todos.map((todo) => (
+              {filteredTodos.map((todo) => (
                 <ToDo
                   todo={todo}
                   todos={todos}
