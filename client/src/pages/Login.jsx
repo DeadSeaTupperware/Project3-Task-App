@@ -40,53 +40,67 @@ const Login = () => {
 
   return (
     <Container>
-         <Header as="h2" style={{ color: "white" }} textAlign="center">
-          Log-in to your account
-        </Header>
-        <Form size="large" onSubmit={handleFormSubmit}>
-          <Segment stacked style={{ borderColor: "#d41050" }}>
-            <Form.Input
-              fluid
-              icon="user"
-              iconPosition="left"
-              placeholder="E-mail address"
-              name="email"
-              type="email"
-              value={formState.email}
-              onChange={handleChange}
-              style={{ borderColor: "#008599" }}
-            />
-            
-            <Button
-              fluid
-              size="large"
-              style={{ backgroundColor: "#08013a", color: "#fff" }}
-              type="submit"
-              loading={loading}
-              disabled={loading}
-            >
-              {loading ? "Loading..." : "Login"}
-            </Button>
-          </Segment>
-        </Form>
-        {error && (
-          <Message
-            negative
-            style={{ backgroundColor: "#08013a", color: "#fff", borderColor: "#d41050" }}
+      <Header as="h2" style={{ color: "white" }} textAlign="center">
+        Log-in to your account
+      </Header>
+      <Form size="large" onSubmit={handleFormSubmit}>
+        <Segment stacked style={{ borderColor: "#d41050" }}>
+          <Form.Input
+            fluid
+            icon="user"
+            iconPosition="left"
+            placeholder="E-mail address"
+            name="email"
+            type="email"
+            value={formState.email}
+            onChange={handleChange}
+            style={{ borderColor: "#008599" }}
+          />
+          <Form.Input
+            fluid
+            icon="lock"
+            iconPosition="left"
+            placeholder="Password"
+            name="password"
+            type="password"
+            value={formState.password}
+            onChange={handleChange}
+            style={{ borderColor: "#008599" }}
+          />
+          <Button
+            fluid
+            size="large"
+            style={{ backgroundColor: "#08013a", color: "#fff" }}
+            type="submit"
+            loading={loading}
+            disabled={loading}
           >
-            <Message.Header style={{ color: "#fff" }}>Login failed</Message.Header>
-            <p>Please check your credentials and try again.</p>
-          </Message>
-        )}
-        <Message style={{ backgroundColor: "#08013a", color: "#fff" }}>
-          New to us?{" "}
-          <Link to="/Landing" style={{ color: "white" }}>
-            Sign Up
-          </Link>
+            {loading ? "Loading..." : "Login"}
+          </Button>
+        </Segment>
+      </Form>
+      {error && (
+        <Message
+          negative
+          style={{
+            backgroundColor: "#08013a",
+            color: "#fff",
+            borderColor: "#d41050",
+          }}
+        >
+          <Message.Header style={{ color: "#fff" }}>
+            Login failed
+          </Message.Header>
+          <p>Please check your credentials and try again.</p>
         </Message>
-
+      )}
+      <Message style={{ backgroundColor: "#08013a", color: "#fff" }}>
+        New to us?{" "}
+        <Link to="/Landing" style={{ color: "white" }}>
+          Sign Up
+        </Link>
+      </Message>
     </Container>
-     
   );
 };
 
