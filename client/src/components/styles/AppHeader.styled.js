@@ -4,7 +4,7 @@ export const StyledAppHeader = styled.header`
   background-color: #08013a;
   padding: 9px 0 8px 24px;
   display: flex;
-  margin-top: 55%;
+  margin-top: 20%;
   border-radius: 30px;
   border: solid;
 `;

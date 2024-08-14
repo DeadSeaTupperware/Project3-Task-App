@@ -16,6 +16,7 @@ import {
 const Login = () => {
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error, loading }] = useMutation(LOGIN_USER);
+  const [isLoggedIn, setIsLoggedIn] = useState(Auth.loggedIn());
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -33,17 +34,26 @@ const Login = () => {
       });
 
       Auth.login(data.login.token);
+      setIsLoggedIn(true);
     } catch (e) {
       console.error(e);
     }
   };
 
+  const handleLogout = () => {
+    Auth.logout();
+    setIsLoggedIn(false);
+  };
+
   return (
     <Container>
       <Header as="h2" style={{ color: "white" }} textAlign="center">
-        Log-in to your account
+        {isLoggedIn ? "Logout from your account" : "Log-in to your account"}
       </Header>
-      <Form size="large" onSubmit={handleFormSubmit}>
+      <Form
+        size="large"
+        onSubmit={isLoggedIn ? handleLogout : handleFormSubmit}
+      >
         <Segment stacked style={{ borderColor: "#d41050" }}>
           <Form.Input
             fluid
@@ -54,7 +64,7 @@ const Login = () => {
             type="email"
             value={formState.email}
             onChange={handleChange}
-            style={{ borderColor: "#008599" }}
+            style={{ borderColor: "#008599", color: "#000000" }}
           />
           <Form.Input
             fluid
@@ -65,7 +75,7 @@ const Login = () => {
             type="password"
             value={formState.password}
             onChange={handleChange}
-            style={{ borderColor: "#008599" }}
+            style={{ borderColor: "#008599", color: "#000000" }}
           />
           <Button
             fluid
@@ -75,7 +85,7 @@ const Login = () => {
             loading={loading}
             disabled={loading}
           >
-            {loading ? "Loading..." : "Login"}
+            {loading ? "Loading..." : isLoggedIn ? "Logout" : "Login"}
           </Button>
         </Segment>
       </Form>
@@ -95,9 +105,9 @@ const Login = () => {
         </Message>
       )}
       <Message style={{ backgroundColor: "#08013a", color: "#fff" }}>
-        New to us?{" "}
+        {isLoggedIn ? "Logged in successfully!" : "New to us? "}
         <Link to="/Landing" style={{ color: "white" }}>
-          Sign Up
+          {isLoggedIn ? "Logout" : "Sign Up"}
         </Link>
       </Message>
     </Container>
