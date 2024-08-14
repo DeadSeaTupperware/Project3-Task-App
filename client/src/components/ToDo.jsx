@@ -15,7 +15,17 @@ export default function ToDo({ todo, todos, setTodos, text }) {
   audio.volume = 0.2;
 
   const completeHandler = () => {
-    setTodos(todos.filter((el) => el.id !== todo.id));
+    setTodos(
+      todos.map((item) => {
+        if (item.id === todo.id) {
+          return {
+            ...item,
+            completed: !item.completed,
+          };
+        }
+        return item;
+      })
+    );
     audio.play();
   };
 
@@ -28,13 +38,13 @@ export default function ToDo({ todo, todos, setTodos, text }) {
 
   return (
     <StyledToDo>
-      <Control>
+      <Control complete={todo.completed}>
         <ControlButton onClick={completeHandler}>
-          <ControlImage src="./images/tick.svg"></ControlImage>
+          <ControlImage complete={todo.completed} src="./images/tick.svg" />
         </ControlButton>
       </Control>
       <ToDoInfo>
-        <ToDoName>{text}</ToDoName>
+        <ToDoName complete={todo.completed}>{text}</ToDoName>
         <DeleteButton onClick={deleteHandler}>
           <DeleteImage src="./images/trash.svg"></DeleteImage>
         </DeleteButton>
