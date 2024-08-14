@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import Landing from "./pages/Landing";
 import TaskBoard from "./pages/TaskBoard";
 import Homepage from "./pages/Homepage";
+import UserPage from "./pages/UserPage";
 
 const router = createBrowserRouter([
   {
@@ -16,14 +17,13 @@ const router = createBrowserRouter([
     element: <App />,
     // error: <Error />,
     children: [
-      
       {
         index: true,
         element: <Homepage />,
       },
       {
         path: "Landing",
-        element: <Landing />
+        element: <Landing />,
       },
       {
         path: "login",
@@ -32,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "taskboard",
         element: <TaskBoard />,
+      },
+      {
+        path: "userpage",
+        element: <UserPage />,
       },
     ],
   },
