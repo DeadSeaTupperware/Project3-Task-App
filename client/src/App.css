@@ -326,6 +326,15 @@ h2 {
   font-size: 1.5rem;
 }
 
+.signup-container,
+.task-board,
+.task-input,
+.task-add-button,
+.task-delete-button,
+.task-calendar {
+  border-radius: 8px; /* Ensure consistent border-radius across elements */
+}
+
 .highlight {
   background-color: #ffeb3b !important;
   border-radius: 50%;
