@@ -28,9 +28,9 @@ const Navbar = () => (
       </Container>
     </Menu><nav className="navbar">
         <div className="navbar-container">
-          <Link to="/" className="navbar-brand">
+          {/* <Link to="/" className="navbar-brand">
             <img src="/Strive-Logo.jpg" alt="Logo" className="logo" />
-          </Link>
+          </Link> */}
           {/* <button className="navbar-toggle" aria-controls="basic-navbar-nav"> */}
             {/* ☰ */}
           {/* </button> */}
