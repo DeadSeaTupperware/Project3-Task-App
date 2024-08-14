@@ -12,6 +12,9 @@ const Navbar = () => (
           Home
         </Menu.Item>
         <Menu.Item as={Link} to="/TaskBoard">
+          Calendar
+        </Menu.Item>
+        <Menu.Item as={Link} to="/UserPage">
           Task Board
         </Menu.Item>
         <Menu.Menu position="right">
