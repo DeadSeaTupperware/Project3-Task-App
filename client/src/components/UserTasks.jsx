@@ -23,12 +23,6 @@ import {
   HabitStreak,
   HabitName,
   TasksFilterContainer,
-  Daily,
-  DailyName,
-  DailyInfo,
-  DailyStreakContainer,
-  DailyLogo,
-  DailyStreak,
   ToDo,
   ToDoInfo,
   ToDoName,
@@ -39,6 +33,7 @@ import {
   ItemPrice,
   ItemsContainer,
 } from "./styles/UserTasks.styled";
+import Daily from "./Daily";
 
 export default function UserTasks() {
   return (
@@ -101,18 +96,7 @@ export default function UserTasks() {
             </Flex>
             <TasksList>
               <QuickAdd placeholder="Add a Daily"></QuickAdd>
-              <Daily>
-                <Control $type="daily" left>
-                  <ControlButton></ControlButton>
-                </Control>
-                <DailyInfo>
-                  <DailyName>Take out trash</DailyName>
-                  <DailyStreakContainer>
-                    <DailyLogo src="./images/fast-forward.svg"></DailyLogo>
-                    <DailyStreak>10</DailyStreak>
-                  </DailyStreakContainer>
-                </DailyInfo>
-              </Daily>
+              <Daily></Daily>
             </TasksList>
           </TasksColumn>
           {/* To do's */}
