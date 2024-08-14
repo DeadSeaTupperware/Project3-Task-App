@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
 export const StyledAppHeader = styled.header`
-  background-color: ${({ theme }) => theme.colors.appheader};
+  background-color: #08013a;
   padding: 9px 0 8px 24px;
   display: flex;
+  margin-top: 55%;
+  border-radius: 30px;
+  border: solid;
 `;
 
 export const MemberDetails = styled.div`
@@ -104,7 +107,7 @@ export const PartyTextContainer = styled.div`
 export const InviteButton = styled.button`
   color: #ffffff;
   font-size: 14px;
-  background: #4f2a93;
+  background: #100559;
   margin: 16px 0 0;
   padding: 10px 12px;
   font-weight: bold;

@@ -32,10 +32,10 @@ export default function AppHeader() {
             </ClassIconContainer>
             <ClassInfo>
               <CharacterName>
-                <span>anwowie</span>
+                <span>Silverfingers</span>
               </CharacterName>
               <CharacterLevel>
-                <span>@anwowie • Level 30 Rogue</span>
+                <span>@Silverfingers • Level 30 Rogue</span>
               </CharacterLevel>
             </ClassInfo>
           </ProfileContainer>
@@ -58,10 +58,10 @@ export default function AppHeader() {
       </MemberDetails>
       <PartyContainer>
         <PartyTextContainer>
-          <PartyTextHeader>Battle Monsters With Friends</PartyTextHeader>
+          <PartyTextHeader>Complete Quests with Friends!</PartyTextHeader>
           <PartyTextContent>
-            Inviting friends to your Party will grant you an exclusive Quest
-            Scroll to battle the Basi-List together!
+            Invite friends to your Party to take on exclusive Quests together!
+            Or challenge them to weekly task battles!
           </PartyTextContent>
           <InviteButton>Invite Friends</InviteButton>
         </PartyTextContainer>

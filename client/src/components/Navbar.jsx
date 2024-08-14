@@ -1,9 +1,9 @@
-import { Menu, Container } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
+import { Menu, Container } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => (
-
-    <><Menu inverted borderless fixed="top" className="custom-navbar">
+  <>
+    <Menu inverted borderless fixed="top" className="custom-navbar">
       <Container>
         <Menu.Item header as={Link} to="/">
           <img src={"/Strive-Logo.png"} alt="Logo" className="logo" />
@@ -12,6 +12,9 @@ const Navbar = () => (
           Home
         </Menu.Item>
         <Menu.Item as={Link} to="/TaskBoard">
+          Calendar
+        </Menu.Item>
+        <Menu.Item as={Link} to="/UserPage">
           Task Board
         </Menu.Item>
         <Menu.Menu position="right">
@@ -26,15 +29,16 @@ const Navbar = () => (
           </Menu.Item>
         </Menu.Menu>
       </Container>
-    </Menu><nav className="navbar">
-        <div className="navbar-container">
-          {/* <Link to="/" className="navbar-brand">
+    </Menu>
+    <nav className="navbar">
+      <div className="navbar-container">
+        {/* <Link to="/" className="navbar-brand">
             <img src="/Strive-Logo.jpg" alt="Logo" className="logo" />
           </Link> */}
-          {/* <button className="navbar-toggle" aria-controls="basic-navbar-nav"> */}
-            {/* ☰ */}
-          {/* </button> */}
-          {/* <div className="navbar-collapse" id="basic-navbar-nav">
+        {/* <button className="navbar-toggle" aria-controls="basic-navbar-nav"> */}
+        {/* ☰ */}
+        {/* </button> */}
+        {/* <div className="navbar-collapse" id="basic-navbar-nav">
             <ul className="nav">
               <li className="nav-item">
                 <Link to="/" className="nav-link">Home</Link>
@@ -51,9 +55,9 @@ const Navbar = () => (
 
             </ul>
           </div> */}
-        </div>
-      </nav></>
-
+      </div>
+    </nav>
+  </>
 );
 
 export default Navbar;

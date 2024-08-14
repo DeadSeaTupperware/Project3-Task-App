@@ -1,5 +1,3 @@
-
-
 body {
   margin: 0;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -30,8 +28,10 @@ body {
 #root {
   max-width: 1280px;
   margin: 0 auto;
+
   padding: 0; 
   padding-top: 340px;
+  padding: 0;
 
 }
 
@@ -53,7 +53,7 @@ html {
 }
 
 .about-us p {
-  font-size: 1.2em; 
+  font-size: 1.2em;
 }
 
 .custom-navbar .item,
@@ -61,7 +61,6 @@ html {
   color: white !important;
   transition: color 0.3s ease;
 }
-
 
 .custom-navbar .item.header {
   font-weight: bold;
@@ -76,46 +75,46 @@ html {
 .navbar-brand {
   display: flex;
   align-items: center;
-
 }
 
 .navbar-brand img {
-  height: 40px; 
-  margin-right: 1rem; 
+  height: 40px;
+  margin-right: 1rem;
 }
 
 .nav-link {
   color: gray;
   font-weight: 500;
   position: relative;
-  }
-  
-  .nav-link:hover, .nav-link.active {
+}
+
+.nav-link:hover,
+.nav-link.active {
   color: black;
-  }
-  @media (min-width: 991px) {
+}
+@media (min-width: 991px) {
   .nav-link::before {
-      content: "";
-      position: absolute;
-      bottom: 0; 
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 2px;
-      background-color: #d41050;
-      visibility: hidden;
-      transition: 0.3s ease-in-out;
-  }
-  
-  .nav-link:hover::before, .nav-link:active::before {
-      width: 100%;
-      visibility: visible;
-  }
-  
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #d41050;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
   }
 
+  .nav-link:hover::before,
+  .nav-link:active::before {
+    width: 100%;
+    visibility: visible;
+  }
+}
+
 .navbar-toggle {
-  display: none; 
+  display: none;
 }
 
 /* Responsive styling for mobile view */
@@ -213,6 +212,7 @@ html {
 .task-board {
   max-width: 600px;
   margin: 0 auto;
+  margin-top: 20%;
   padding: 2rem;
   background-color: #f0f0f0;
   border-radius: 8px;
@@ -312,7 +312,8 @@ html {
 }
 
 /* Headings */
-h1, h2 {
+h1,
+h2 {
   text-align: center;
   margin-bottom: 1rem;
   color: #08013a;
@@ -338,7 +339,7 @@ h2 {
 .highlight {
   background-color: #ffeb3b !important;
   border-radius: 50%;
-  color: black !important; 
+  color: black !important;
   font-weight: bold;
 }
 
