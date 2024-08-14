@@ -30,12 +30,10 @@ export default function UserTasks() {
   const inputTextHandler = (e) => {
     setInputText(e.target.value);
   };
+
   const submitTodoHandler = (e) => {
     e.preventDefault();
-    setTodos([
-      ...todos,
-      { text: inputText, completed: false, id: Math.random() * 1000 },
-    ]);
+    setTodos([...todos, { text: inputText, id: Math.random() * 1000 }]);
     setInputText("");
   };
 
@@ -85,28 +83,33 @@ export default function UserTasks() {
           </TasksColumn>
           {/* To do's */}
           <TasksColumn>
-            <form onSubmit={submitTodoHandler}>
-              <Flex>
-                <ColumnTitle>To Do's</ColumnTitle>
-                <TasksFilterContainer>
-                  <TasksFilter>Active</TasksFilter>
-                  <TasksFilter>Scheduled</TasksFilter>
-                  <TasksFilter>Complete</TasksFilter>
-                </TasksFilterContainer>
-              </Flex>
-              <TasksList>
+            <Flex>
+              <ColumnTitle>To Do's</ColumnTitle>
+              <TasksFilterContainer>
+                <TasksFilter>Active</TasksFilter>
+                <TasksFilter>Scheduled</TasksFilter>
+                <TasksFilter>Complete</TasksFilter>
+              </TasksFilterContainer>
+            </Flex>
+            <TasksList>
+              <form onSubmit={submitTodoHandler}>
                 <QuickAdd
                   value={inputText}
-                  type={"text"}
                   onChange={inputTextHandler}
+                  type={"text"}
                   placeholder="Add a To Do"
                 ></QuickAdd>
-                {todos.map((todo) => (
-                  <ToDo key={todo.id} text={todo.text} />
-                ))}
-                <ToDo />
-              </TasksList>
-            </form>
+              </form>
+              {todos.map((todo) => (
+                <ToDo
+                  todo={todo}
+                  todos={todos}
+                  setTodos={setTodos}
+                  key={todo.id}
+                  text={todo.text}
+                />
+              ))}
+            </TasksList>
           </TasksColumn>
           {/* Rewards */}
           <TasksColumn>
