@@ -23,6 +23,12 @@ import {
   HabitStreak,
   HabitName,
   TasksFilterContainer,
+  Daily,
+  DailyName,
+  DailyInfo,
+  DailyStreakContainer,
+  DailyLogo,
+  DailyStreak,
 } from "./styles/UserTasks.styled";
 
 export default function UserTasks() {
@@ -40,6 +46,7 @@ export default function UserTasks() {
           </InputContainer>
         </TasksNavigation>
         <Flex>
+          {/* Habits */}
           <TasksColumn>
             <Flex>
               <ColumnTitle>Habits</ColumnTitle>
@@ -52,8 +59,8 @@ export default function UserTasks() {
             <TasksList>
               <QuickAdd placeholder="Add a Habit"></QuickAdd>
               <Habit>
-                <Control left>
-                  <ControlButton>
+                <Control habit left>
+                  <ControlButton habit>
                     <HabitLogo src="./images/plus-sign.svg"></HabitLogo>
                   </ControlButton>
                 </Control>
@@ -65,8 +72,8 @@ export default function UserTasks() {
                     <HabitLogo src="./images/habit-tags.svg"></HabitLogo>
                   </HabitStreakContainer>
                 </HabitInfo>
-                <Control left>
-                  <ControlButton>
+                <Control habit left>
+                  <ControlButton habit>
                     <HabitLogo src="./images/minus-sign.svg"></HabitLogo>
                   </ControlButton>
                 </Control>
@@ -74,13 +81,32 @@ export default function UserTasks() {
             </TasksList>
           </TasksColumn>
           <TasksColumn>
+            {/* Dailies */}
             <Flex>
               <ColumnTitle>Dailies</ColumnTitle>
-              <TasksFilter>All</TasksFilter>
-              <TasksFilter>Due</TasksFilter>
-              <TasksFilter>Not Due</TasksFilter>
+              <TasksFilterContainer>
+                <TasksFilter>All</TasksFilter>
+                <TasksFilter>Due</TasksFilter>
+                <TasksFilter>Not Due</TasksFilter>
+              </TasksFilterContainer>
             </Flex>
+            <TasksList>
+              <QuickAdd placeholder="Add a Daily"></QuickAdd>
+              <Daily>
+                <Control left>
+                  <ControlButton></ControlButton>
+                </Control>
+                <DailyInfo>
+                  <DailyName>Take out trash</DailyName>
+                  <DailyStreakContainer>
+                    <DailyLogo src="./images/fast-forward.svg"></DailyLogo>
+                    <DailyStreak>10</DailyStreak>
+                  </DailyStreakContainer>
+                </DailyInfo>
+              </Daily>
+            </TasksList>
           </TasksColumn>
+          {/* To do's */}
           <TasksColumn>
             <Flex>
               <ColumnTitle>To Do's</ColumnTitle>
@@ -89,6 +115,7 @@ export default function UserTasks() {
               <TasksFilter>Complete</TasksFilter>
             </Flex>
           </TasksColumn>
+          {/* Rewards */}
           <TasksColumn>
             <Flex>
               <ColumnTitle>Rewards</ColumnTitle>
