@@ -304,3 +304,14 @@ h2 {
 .task-calendar .react-calendar__navigation button:hover {
   background-color: #0056b3;
 }
+
+/* Calendar styling */
+.task-calendar {
+  margin-bottom: 1.5rem;
+  align-self: center;
+  border: 4px solid #08013a; /* Thicker blue border */
+  border-radius: 12px; /* More rounded corners */
+  padding: 1rem; /* Added padding to space the calendar */
+  max-width: 100%; /* Ensures the calendar fits within its parent */
+  box-sizing: border-box; /* Ensures padding and border are included in total width */
+}
