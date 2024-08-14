@@ -21,6 +21,7 @@
     "apollo-server-express": "^3.13.0",
     "bcrypt": "^5.1.1",
     "bootstrap": "^5.3.3",
+    "common": "^0.2.5",
     "debug": "^4.3.6",
     "lodash": "^4.17.21",
     "n_": "^4.0.1",
