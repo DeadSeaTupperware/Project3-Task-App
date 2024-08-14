@@ -31,6 +31,7 @@
     "react-router-dom": "^6.26.0",
     "semantic-ui-css": "^2.5.0",
     "semantic-ui-react": "^2.1.5",
-    "styled-components": "^6.1.12"
+    "styled-components": "^6.1.12",
+    "whatwg-url": "^14.0.0"
   }
 }
