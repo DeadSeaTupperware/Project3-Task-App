@@ -368,3 +368,7 @@ h2 {
   max-width: 100%; /* Ensures the calendar fits within its parent */
   box-sizing: border-box; /* Ensures padding and border are included in total width */
 }
+
+.about-us {
+  margin-top: 600px;
+}
