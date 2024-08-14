@@ -178,6 +178,14 @@ body {
   background-color: #535bf2;
 }
 
+.signup-button:hover,
+.task-add-button:hover,
+.task-delete-button:hover {
+  background-color: #535bf2;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
 /* Overall task board styling */
 .task-board {
   max-width: 600px;
