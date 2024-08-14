@@ -1,9 +1,7 @@
-import React from 'react';
 import { Menu, Container } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
-  return (
+const Navbar = () => (
 
     <><Menu inverted borderless fixed="top" className="custom-navbar">
       <Container>
@@ -56,7 +54,6 @@ const Navbar = () => {
         </div>
       </nav></>
 
-  );
-};
+);
 
 export default Navbar;

@@ -26,6 +26,7 @@ body {
 .about-us p {
   font-size: 1.2em; 
 }
+
 .navbar {
   background-color: #fff;
   height: 80px;
@@ -33,7 +34,6 @@ body {
   border-radius: 16px;
   padding: 0.5rem;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(0, 0, 0, 0.1);
-
 }
 
 .custom-navbar .item,
@@ -53,20 +53,66 @@ body {
 }
 
 .navbar-brand {
+  display: flex;
   align-items: center;
 
 }
 
-.custom-navbar .item:hover {
-  background-color: rgba(255, 255, 255, 0.1) !important;
+.navbar-brand img {
+  height: 40px; 
+  margin-right: 1rem; 
 }
 
-.custom-navbar .item.active {
-  background-color: rgba(255, 255, 255, 0.2) !important;
-  font-weight: bold;
+.nav-link {
+  color: gray;
+  font-weight: 500;
+  position: relative;
+  }
+  
+  .nav-link:hover, .nav-link.active {
+  color: black;
+  }
+  @media (min-width: 991px) {
+  .nav-link::before {
+      content: "";
+      position: absolute;
+      bottom: 0; 
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background-color: #d41050;
+      visibility: hidden;
+      transition: 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover::before, .nav-link:active::before {
+      width: 100%;
+      visibility: visible;
+  }
+  
+  }
+
+.navbar-toggle {
+  display: none; 
 }
 
+/* Responsive styling for mobile view */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
 
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .navbar-toggle {
+    display: block; /* Show toggle button for small screens */
+  }
+}
 .signup-container {
   display: flex;
   flex-direction: column;
@@ -257,4 +303,15 @@ h2 {
 
 .task-calendar .react-calendar__navigation button:hover {
   background-color: #0056b3;
+}
+
+/* Calendar styling */
+.task-calendar {
+  margin-bottom: 1.5rem;
+  align-self: center;
+  border: 4px solid #08013a; /* Thicker blue border */
+  border-radius: 12px; /* More rounded corners */
+  padding: 1rem; /* Added padding to space the calendar */
+  max-width: 100%; /* Ensures the calendar fits within its parent */
+  box-sizing: border-box; /* Ensures padding and border are included in total width */
 }
