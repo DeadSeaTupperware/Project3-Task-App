@@ -5,6 +5,7 @@ body {
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #008599;
+  min-height: 200vh;
   background: linear-gradient(120deg, #008599 0%, #007bff 100%);
 }
 
@@ -33,6 +34,7 @@ body {
   padding: 0;
   padding-top: 340px;
   padding: 0;
+  min-height: 50vh;
 }
 
 html {
@@ -378,5 +380,5 @@ h2 {
 }
 
 .about-us {
-  margin-top: 600px;
+  margin-top: 100px;
 }
