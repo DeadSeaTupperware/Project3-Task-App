@@ -5,19 +5,51 @@ body {
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #008599;
+  background: linear-gradient(120deg, #008599 0%, #007bff 100%);
 }
+
 .logo {
-  align-items: center;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-10px);
+  }
 }
 
 #root {
   max-width: 1280px;
   margin: 0 auto;
+
+  padding: 0; 
+  padding-top: 340px;
   padding: 0;
+
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .custom-navbar {
   background-color: #08013a !important;
+  .custom-navbar {
+    background-color: #08013a !important;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 60px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .about-us p {
@@ -27,6 +59,7 @@ body {
 .custom-navbar .item,
 .custom-navbar .item:hover {
   color: white !important;
+  transition: color 0.3s ease;
 }
 
 .custom-navbar .item.header {
@@ -112,6 +145,15 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.signup-form input:focus,
+.nav-link:focus,
+.signup-button:focus,
+.task-add-button:focus,
+.task-delete-button:focus {
+  outline: 2px solid #535bf2;
+  outline-offset: 2px;
+}
+
 .signup-container h2 {
   margin-bottom: 1rem;
   font-size: 1.5rem;
@@ -158,6 +200,14 @@ body {
   background-color: #535bf2;
 }
 
+.signup-button:hover,
+.task-add-button:hover,
+.task-delete-button:hover {
+  background-color: #535bf2;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
 /* Overall task board styling */
 .task-board {
   max-width: 600px;
@@ -166,7 +216,7 @@ body {
   padding: 2rem;
   background-color: #f0f0f0;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly increased shadow */
 }
 
 /* Form styling */
@@ -256,6 +306,11 @@ body {
   background-color: #c82333;
 }
 
+.task-item:hover {
+  background-color: #e0e0e0; /* Lighten the background on hover */
+  cursor: pointer;
+}
+
 /* Headings */
 h1,
 h2 {
@@ -270,6 +325,15 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
+}
+
+.signup-container,
+.task-board,
+.task-input,
+.task-add-button,
+.task-delete-button,
+.task-calendar {
+  border-radius: 8px; /* Ensure consistent border-radius across elements */
 }
 
 .highlight {
