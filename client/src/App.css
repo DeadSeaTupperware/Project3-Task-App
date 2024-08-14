@@ -27,6 +27,14 @@ body {
 
 .custom-navbar {
   background-color: #08013a !important;
+  .custom-navbar {
+    background-color: #08013a !important;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 60px; 
+  }
 }
 
 .about-us p {
