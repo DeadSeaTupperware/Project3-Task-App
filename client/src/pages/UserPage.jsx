@@ -1,6 +1,7 @@
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "../components/styles/Global";
 import UserTasks from "../components/UserTasks";
+import AppHeader from "../components/AppHeader";
 
 const theme = {
   colors: {
@@ -17,6 +18,7 @@ function UserPage() {
       <ThemeProvider theme={theme}>
         <>
           <GlobalStyles />
+          <AppHeader />
           <UserTasks />
         </>
       </ThemeProvider>
