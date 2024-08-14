@@ -306,6 +306,11 @@ html {
   background-color: #c82333;
 }
 
+.task-item:hover {
+  background-color: #e0e0e0; /* Lighten the background on hover */
+  cursor: pointer;
+}
+
 /* Headings */
 h1, h2 {
   text-align: center;
