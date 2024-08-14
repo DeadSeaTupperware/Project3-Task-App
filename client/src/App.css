@@ -45,6 +45,7 @@ body {
 .custom-navbar .item,
 .custom-navbar .item:hover {
   color: white !important;
+  transition: color 0.3s ease;
 }
 
 
