@@ -64,7 +64,7 @@ const Login = () => {
             type="email"
             value={formState.email}
             onChange={handleChange}
-            style={{ borderColor: "#008599" }}
+            style={{ borderColor: "#008599", color: "#000000" }}
           />
           <Form.Input
             fluid
@@ -75,7 +75,7 @@ const Login = () => {
             type="password"
             value={formState.password}
             onChange={handleChange}
-            style={{ borderColor: "#008599" }}
+            style={{ borderColor: "#008599", color: "#000000" }}
           />
           <Button
             fluid
