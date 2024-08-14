@@ -25,6 +25,10 @@ body {
 
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .custom-navbar {
   background-color: #08013a !important;
   .custom-navbar {
